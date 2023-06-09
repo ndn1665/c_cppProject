@@ -32,7 +32,7 @@ int main(void) {
 
 	int onedimarr[4] = { 1,2,3,4 };
 	int arr[] = { 1,2,3,4,5,6,7 };
-	int arrLen = sizeof(arr) / sizeof(int);
+	int arrLen = sizeof(arr) / sizeof(int); //arr의 길이를 반환하려면 이렇게 해야함
 
 	//int * ptr = 0x0010;
 	//ptr +=1 은 0x0014이다 포인터는 증감연산을 하면 자료형의 크기만큼 변화한다.
@@ -45,12 +45,9 @@ int main(void) {
 	*(ptr + 1) = arr[1]
 	*/
 
-	int a = 10;
-	printf("%d", sizeof(a)); //4
-
 	int* ptr = &a;
 	printf("%d", sizeof(ptr));//8포인터 변수의 크기는 32비트 운영체제인지 64비트 운영체제인지에 따라서 결정된다.
-	//따라서 포인터 변수의 크기는 a의 크기와는 상관이 없고,
+	//따라서 포인터 변수의 크기는 a의 크기와는 상관이 없다.
 	/*
 	void simplefunc(char* arr)
 	{
@@ -73,14 +70,13 @@ int main(void) {
 	int* const ptr = &num;//ptr에 저장된 값(num의 주소값)을 변경하는 것을 허용하지 않음.
 	//*ptr = 40;이건 가능 ptr의 주소값을 변경한것이 아니기 때문
 
-	int(*ptr)[4]; // int 형 변수를 가리키는 포인터, [4]는 연산시 4칸씩 건너뛰는 포인터를 의미.
 	/*
 	int arr[3][2] = {
 		{1,2},
 		{3,4},
 		{5,6}
 		}
-	int (*ptr)[2] = arr;
+	int (*ptr)[2] = arr; 배열에 대한 포인터
 	printf("%d",ptr[1][1]);
 
 	*/

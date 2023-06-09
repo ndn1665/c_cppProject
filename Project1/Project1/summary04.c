@@ -42,7 +42,8 @@ int main(void) {
 	ex> arr = (int *)realloc(ptr,sizeof(int)*100);
 
 	*/
-	ptr1 = 10;
+	int num = 10;
+	ptr1 = &num;
 
 	for (int i = 0; i < 10; i++) {
 		ptr2[i] = i;

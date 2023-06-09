@@ -24,3 +24,14 @@ int main(void) {
 }
 
 */
+/*
+헤더파일의 중복삽입 문제해결법
+#ifndef __STDIV2_H__
+#define __STDIV2_H__
+typedef struct div{
+	int quotient;
+	int remainder;
+}
+#endif
+*/
+

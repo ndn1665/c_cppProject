@@ -25,6 +25,10 @@ int main() {
 	cout << num1 << endl;
 	cout << num2 << endl;
 
+	int* a = new int;
+	int& ref = *a;
+	*a = 3;
+	cout << ref;
 
 	return 0;
 }

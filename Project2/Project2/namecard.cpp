@@ -22,7 +22,17 @@ public:
 		strcpy(compName, incomp);
 		number = new char[strlen(innum) + 1];
 		strcpy(number, innum);
-
+	}
+	NameCard(NameCard& copy)
+		:info(copy.info)
+	{
+		name = new char[strlen(copy.name) + 1];
+		strcpy(name, copy.name); // 여기서 copy.name방식으로 copy의 멤버변수에 접근할 수 있다. 이는 같은 클래스의 서로다른 객체에서
+								// 다른 객체의 멤버변수에 현객체의 멤버함수로 접근 할 수있다는 것을 보여준다.
+		compName = new char[strlen(copy.compName) + 1];
+		strcpy(compName, copy.compName);
+		number = new char[strlen(copy.number) + 1];
+		strcpy(number, copy.number);
 	}
 	void show() const
 	{
@@ -55,6 +65,7 @@ public:
 		delete[]name;
 		delete[]compName;
 		delete[]number;
+		cout << "called destructor" << endl;
 	}
 };
 
@@ -62,7 +73,9 @@ public:
 int main()
 {
 	NameCard manclerk((char*)"lee", (char*)"samsung", (char*)"010-7102-1665", COMP_POS::CLERK);
+	NameCard copy1 = manclerk;
 	manclerk.show();
+	copy1.show();
 	cout << endl;
 	return 0;
 }

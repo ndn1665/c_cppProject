@@ -20,6 +20,7 @@ void swap(char* ptr1, char* ptr2) {
 //swap함수 오버로딩
 //오버로딩의 기준은 매개변수의 자료형 또는 개수
 //반환형은 오버로딩의 기준이 될 수 없다.
+//함수의 const선언 유무도 함수 오버로딩의 조건이 된다.
 
 inline int func(int num) {
 	int num2 = num + 1;

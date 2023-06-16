@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="opp01.cpp">
+    <ClCompile Include="oop01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="opp02.cpp">
+    <ClCompile Include="oop02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="oop03.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

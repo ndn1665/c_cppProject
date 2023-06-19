@@ -1,5 +1,5 @@
 #include<iostream>
-#pragma warnings(disable: 4996)
+#pragma warning(disable: 4996)
 
 using namespace std;
 using std::cin;

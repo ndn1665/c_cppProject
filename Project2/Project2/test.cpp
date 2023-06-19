@@ -1,30 +1,40 @@
 #include<iostream>
-#pragma warnings(disable: 4996)
+#pragma warning(disable: 4996)
 
 using namespace std;
 using std::cin;
 
-class Simple
+class Rectangle
 {
 private:
-	int num;
-	char name[20];
+	int x;
+	int y;
 public:
-	Simple(int n, char* inname)
-		:num(n) 
+	Rectangle(int inx, int iny)
+		:x(inx), y(iny)
 	{}
-	void check(Simple& other)
+	void ShowAreaInfo()
 	{
-		cout << other.num << endl;
+		cout << "result : " << x * y << endl;
 	}
 };
 
+class Square : public Rectangle
+{
+private:
+	int r;
+public:
+	Square(int inr)
+		:Rectangle(inr, inr)
+	{}
+};
 
 int main(void)
 {
-	Simple one(3);
-	Simple two(5);
-	one.check(two);
-	two.check(one);
+	Rectangle rec(4, 3);
+	rec.ShowAreaInfo();
+	Square sqr(7);
+	sqr.ShowAreaInfo();
+	cout << endl;
 	return 0;
 }

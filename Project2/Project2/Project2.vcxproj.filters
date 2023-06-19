@@ -54,6 +54,15 @@
     <ClCompile Include="template.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="summary06.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="inheritnace.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="inheritance2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cal.h">

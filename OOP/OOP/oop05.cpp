@@ -5,20 +5,20 @@ using namespace std;
 using std::cin;
 
 
-class Customer
+class Account
 {
 private:
 	int creditNum;
 	char* name;
 	int money;
 public:
-	Customer(int incdnum, char* inname, int inmoney)
+	Account(int incdnum, char* inname, int inmoney)
 		:creditNum(incdnum), money(inmoney)
 	{
 		name = new char[strlen(inname) + 1];
 		strcpy(name, inname);
 	}
-	Customer(const Customer& copy)
+	Account(const Account& copy)
 		:creditNum(copy.creditNum), money(copy.money)
 	{
 		name = new char[strlen(copy.name) + 1];
@@ -30,19 +30,25 @@ public:
 	int GetMoney() const;
 	void showAll() const;
 
-
-	~Customer()
+	~Account()
 	{
 		delete[]name;
 	}
 
 };
 
+class NormalAccount :public Account
+{
+private:
+
+public:
+
+};
 
 class AccountHandler
 {
 private:
-	Customer* customers[100];
+	Account* customers[100];
 	int customersCount;
 public:
 	AccountHandler()
@@ -102,20 +108,20 @@ int main()
 }
 
 
-int Customer::GetCreditNum() const
+int Account::GetCreditNum() const
 {
 	return creditNum;
 }
-int Customer::GetMoney() const
+int Account::GetMoney() const
 {
 	return money;
 }
-void Customer::Deposit(int depositMoney)
+void Account::Deposit(int depositMoney)
 {
 	money += depositMoney;
 }
 
-int Customer::Withdraw(int withdrawMoney)
+int Account::Withdraw(int withdrawMoney)
 {
 	if (money - withdrawMoney < 0)
 	{
@@ -126,14 +132,14 @@ int Customer::Withdraw(int withdrawMoney)
 	
 }
 
-void Customer::showAll() const
+void Account::showAll() const
 {
 	cout << creditNum << endl;
 	cout << name << endl;
 	cout << money << endl;
 }
 
-//AccountHander ¸â¹öÇÔ¼ö
+//AccountHandler ¸â¹öÇÔ¼ö
 
 void AccountHandler::ShowMenu() const
 {
@@ -158,7 +164,7 @@ void AccountHandler::AccountCreate()
 	cout << "ÀÔ±Ý¾× : ";
 	cin >> inmoney;
 
-	customers[customersCount++] = new Customer(incredit, inname, inmoney);//Customer °´Ã¼ »ý¼º
+	customers[customersCount++] = new Account(incredit, inname, inmoney);//Customer °´Ã¼ »ý¼º
 	cout << endl;
 }
 

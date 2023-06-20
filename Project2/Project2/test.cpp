@@ -4,37 +4,10 @@
 using namespace std;
 using std::cin;
 
-class Rectangle
-{
-private:
-	int x;
-	int y;
-public:
-	Rectangle(int inx, int iny)
-		:x(inx), y(iny)
-	{}
-	void ShowAreaInfo()
-	{
-		cout << "result : " << x * y << endl;
-	}
-};
-
-class Square : public Rectangle
-{
-private:
-	int r;
-public:
-	Square(int inr)
-		:Rectangle(inr, inr)
-	{}
-};
-
 int main(void)
 {
-	Rectangle rec(4, 3);
-	rec.ShowAreaInfo();
-	Square sqr(7);
-	sqr.ShowAreaInfo();
+	int a = 10;
+	cout << (double)a / 100 << endl;
 	cout << endl;
 	return 0;
 }

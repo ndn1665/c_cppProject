@@ -15,6 +15,9 @@ public:
 	//매개변수의 default값이 없으면 new Point[len]을 해줄 수 없다.
 	//왜냐하면 인자를 받지않는 void생성자의 호출을 통해서 배열요소를 이루는 객체가 생성되기 때문이다.
 	//따라서 void생성자가 호출됐을때 xpos와ypos에 값을 넣어줄 default값이 있어야한다.
+	//Point(void)
+	//: xpos(0), ypos(0)
+	//{} 아니면 이런식으로 매개변수가 없는 void생성자를 만들기
 	friend ostream& operator<<(ostream& os, Point& pos);
 };
 

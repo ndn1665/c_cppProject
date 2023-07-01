@@ -1,8 +1,8 @@
 #include<iostream>
 
 //참조자
-//참조자는 무조건 선언과 동시에 변수를 참조하도록 해야한다, 변수의 범위에는 배열요소도 포함된다.
-
+//참조자는 무조건 선언과 동시에 변수를 참조하도록 해야함
+using namespace std;
 void swap(int& ref1, int& ref2) { // 참조자의 매개변수 형식
 	int temp = ref1;
 	ref1 = ref2;
@@ -22,11 +22,8 @@ int main() {
 
 	swap(num1, num2);
 
-	cout << num1 << endl;
-	cout << num2 << endl;
-
-	int* a = new int;
-	int& ref = *a;
+	int* a = new int; // 임시객체의 메모리 주소를 가리킴
+	int& ref = *a; // 임시공간 참조
 	*a = 3;
 	cout << ref;
 

@@ -1,6 +1,6 @@
 //상속
 #include<iostream>
-#pragma warnings(disable: 4996)
+#pragma warning(disable: 4996)
 
 using namespace std;
 using std::cin;
@@ -13,7 +13,7 @@ private:
 protected:
 	int num; // 유도클래스에서 접근가능함
 public:
-	Person()// 이런것이 void생성자
+	Person()// void생성자
 		:age(30) 
 	{}
 	Person(int myage, char* myname)
@@ -32,8 +32,8 @@ public:
 };
 
 class Student : public Person //Person을 상속한 Student
-{//Student클래스에서 Person클래스의 private영역에 직접 진입할 수 없다. 따라서 아래의 이니셜라이저나, Person의 함수로 간접적으로 접근해야 한다.
-//그렇다고 해서 Person의 private한 영역이 상속되지 않는것은 아니다.
+{//Person의 private한 영역이 상속되지만,Student클래스에서 Person클래스의 private영역에 직접 진입할 수 없다.
+//따라서 아래의 이니셜라이저나, Person의 함수로 간접적으로 접근해야 한다.
 private:
 	char major[50];
 public:
@@ -41,7 +41,6 @@ public:
 		:Person(myage,myname) //유도클래스는 이니셜라이저를 이용해서 기초클래스의 생성자 호출을 명시할 수 있다.
 	{						//유도클래스의 객체 생성과정에서 기초클래스의 생성자는 무조건 호출된다. 유도클래스의 생성자에서 기초클래스의 생성자를 호출하지
 							//않으면, 기초클래스의 void생성자가 호출된다.
-							
 		strcpy(major, mymajor);
 	}
 	void ShowInProtected()

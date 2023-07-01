@@ -1,6 +1,6 @@
-//main함수의 정의
-#include "BankingCommonDec1.h"
+#include "BankingCommonDecl.h"
 #include "AccountHandler.h"
+
 int main()
 {
 	int choice;
@@ -14,19 +14,19 @@ int main()
 
 		switch (choice)
 		{
-		case 1:
+		case MAKE:
 			accountHandler.AccountCreate();
 			break;
-		case 2:
+		case DEPOSIT:
 			accountHandler.AccountDeposit();
 			break;
-		case 3:
+		case WITHDRAW:
 			accountHandler.AccountWithdraw();
 			break;
-		case 4:
+		case INQUIRE:
 			accountHandler.ShowAll();
 			break;
-		case 5:
+		case EXIT:
 			return 0;
 		default:
 			cout << "illegal access" << endl;

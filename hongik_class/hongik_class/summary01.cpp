@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	char line[100];
+	int len = 50;
+	cin.getline(line, len, '\n');// line에 len-1만큼 문자입력, \n를 만나면 (len-1만큼 입력 안했더라도) 종료 // 이건 문자열 배열을 만드는것이다.
+	//len 자리엔 널문자가 삽입되기에 그 len -1까지만 입력 된다. 그리고 string line에는 사용할 수 없다. char line이어야 한다. // istream 헤더에 포함된 함수
+	
+	string line2; //string은 문자열 크기에 제약이 없음
+	getline(cin, line2);//getline(cin,변수,구분자(생략가능'\n'))  // string 헤더에 포함된 함수
+	string elvis("elvis presly");
+	cout << elvis[0] << endl; // e
+	string singer;
+	if (singer == elvis) {}//이런식으로 사용 가능
+	//singer.size(); -> 길이구하는 함수 .size()
+	
+	return 0;
+}

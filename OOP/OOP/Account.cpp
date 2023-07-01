@@ -1,6 +1,5 @@
-//Account 클래스의 정의
-#include "BankingCommonDec1.h"
 #include "Account.h"
+#include "BankingCommonDecl.h"
 
 Account::Account(int incdnum, char* inname, int inmoney)
 	:creditNum(incdnum), money(inmoney)
@@ -9,8 +8,6 @@ Account::Account(int incdnum, char* inname, int inmoney)
 	strcpy(name, inname);
 }
 
-void Account::AddRate(int inrate) {}
-
 Account::Account(const Account& copy)
 	:creditNum(copy.creditNum), money(copy.money)
 {
@@ -18,30 +15,31 @@ Account::Account(const Account& copy)
 	strcpy(name, copy.name);
 }
 
-int Account::GetCreditNum() const
-{
-	return creditNum;
-}
-int Account::GetMoney() const
-{
-	return money;
-}
 void Account::Deposit(int depositMoney)
 {
 	money += depositMoney;
 }
-
+	
 int Account::Withdraw(int withdrawMoney)
 {
-	if (money - withdrawMoney < 0)
+	if (money < withdrawMoney)
 	{
 		return 0;
 	}
-
 	money -= withdrawMoney;
-
+	return money;
 }
 
+int Account::GetCreditNum() const
+{
+	return creditNum;
+}
+	
+int Account::GetMoney() const
+{
+	return money;
+}
+	
 void Account::showAll() const
 {
 	cout << creditNum << endl;

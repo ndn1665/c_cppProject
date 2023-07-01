@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\oop07">
+    <Filter Include="소스 파일\oop">
       <UniqueIdentifier>{19fe9bdc-ed07-49df-96a9-fc379e0d1be3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -34,30 +34,39 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Account.cpp">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
     </ClCompile>
     <ClCompile Include="AccountHandler.cpp">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
     </ClCompile>
     <ClCompile Include="BankingSystemMain.cpp">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="String.h">
+      <Filter>소스 파일\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>소스 파일\oop</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
     </ClInclude>
     <ClInclude Include="AccountHandler.h">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
     </ClInclude>
-    <ClInclude Include="BankingCommonDec1.h">
-      <Filter>소스 파일\oop07</Filter>
+    <ClInclude Include="BankingCommonDecl.h">
+      <Filter>소스 파일\oop</Filter>
     </ClInclude>
     <ClInclude Include="HighCreditAccount.h">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
     </ClInclude>
     <ClInclude Include="NormalAccount.h">
-      <Filter>소스 파일\oop07</Filter>
+      <Filter>소스 파일\oop</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundedArray.h">
+      <Filter>소스 파일\oop</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

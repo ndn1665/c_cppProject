@@ -21,9 +21,6 @@
     <ClCompile Include="test.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="summary02.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="summary03.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -88,6 +85,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="operatoroverloading3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Stringclass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Summary10.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="summary11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="summary12.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

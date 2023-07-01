@@ -47,15 +47,16 @@ public:
 
 //참조자에서의 예시
 void Func(const Person& ref); // Person객체 또는 Person객체를 상속한 객체가 인자의 대상이 됨
-							//함수 내부에서는 ref가 실제로는 Student를 가리키고 있다고 해도, 사용할 수 있는 함수는 가상함수 또는 Person의 함수
+							//함수 내부에서는 ref가 실제로는 Student를 가리키고 있다고 해도,
+							// 사용할 수 있는 함수는 가상함수 또는 Person의 함수로 제한된다.
 
 int main(void)
 {
 	Person* ptr;
-	ptr = new Person(); // ptr포인터변수가 객체를 참조하고 있다. ptr포인터 변수는 Person 객체  뿐만아니라, Person객체를 상속하고 있는 유도클래스도
-	//가리킬 수 있다.
-	ptr = new Student(); // aaa형 포인터 변수는 (여기서는 Person 형) aaa객체 또는 aaa를 직간접적으로 상속하는 모든 객체를 가리킬 수 있다. 
-
+	ptr = new Person(); // ptr포인터변수가 객체를 참조하고 있다. ptr포인터 변수는 Person 객체뿐만 아니라,
+						// Person객체를 상속하고 있는 유도클래스의 객체도 가리킬 수 있다.
+	ptr = new Student(); // <위 설명의 예시>
+	
 	Person* pptr[20];
 	//pptr에는 Person객체와 Student객체 둘다 담을 수 있다. 하지만 포인터 연산을 할때는 포인터는 포인터형에 맞춰서 연산을 하므로, 
 	// pptr을 사용하여 Student객체의 멤버에 접근할 수는 없다.
@@ -73,7 +74,6 @@ int main(void)
 	ptr->num3;//오류
 	ptr->num4;//오류
 	*/
-	
 	
 	
 	Student* sptr[20];

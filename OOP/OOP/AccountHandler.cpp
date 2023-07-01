@@ -1,13 +1,10 @@
-//AccountHandler의 정의
-#include "BankingCommonDec1.h"
+#include "BankingCommonDecl.h"
 #include "AccountHandler.h"
 #include "Account.h"
 #include "NormalAccount.h"
 #include "HighCreditAccount.h"
 
-AccountHandler::AccountHandler()
-	:customersCount(0)
-{}
+AccountHandler::AccountHandler() : customersCount(0) {}
 
 void AccountHandler::ShowMenu() const
 {
@@ -26,7 +23,7 @@ void AccountHandler::AccountCreate()
 	int inmoney;
 	int interest;
 	int type;
-	int rate = 0;
+	int special = 0;
 	cout << "[계좌개설 종류 선택]" << endl;
 	cout << "1. 보통예금계좌 2.신용신뢰계좌" << endl;
 	cin >> type;
@@ -56,9 +53,8 @@ void AccountHandler::AccountCreate()
 		cout << "이자율 : ";
 		cin >> interest;
 		cout << "신용등급 : ";
-		cin >> rate;
-		customers[customersCount++] = new HighCreditAccount(incredit, inname, inmoney, interest);
-		customers[customersCount - 1]->AddRate(rate);
+		cin >> special;
+		customers[customersCount++] = new HighCreditAccount(incredit, inname, inmoney, interest,special);
 	}
 	else
 	{
@@ -85,11 +81,11 @@ void AccountHandler::AccountDeposit()
 		if (customers[i]->GetCreditNum() == id)
 		{
 			customers[i]->Deposit(depositMoney);
+			cout << "입금완료" << endl<<endl;
 			return;
 		}
 	}
-	cout << "wrong id" << endl;
-	cout << endl;
+	cout << "wrong id" << endl<<endl;
 }
 
 void AccountHandler::AccountWithdraw()
@@ -115,8 +111,7 @@ void AccountHandler::AccountWithdraw()
 
 		}
 	}
-	cout << "wrong id" << endl;
-	cout << endl;
+	cout << "wrong id" << endl << endl;
 }
 
 void AccountHandler::ShowAll() const
@@ -127,7 +122,8 @@ void AccountHandler::ShowAll() const
 		cout << endl;
 	}
 }
-AccountHandler::~AccountHandler()
+
+AccountHandler::~AccountHandler() 
 {
 	for (int i = 0; i < customersCount; i++)
 	{

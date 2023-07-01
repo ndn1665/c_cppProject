@@ -9,12 +9,12 @@ class Simple
 private:
 	int num;
 	friend class diffclass;// diffclass는 SImple class의 private영역에 접근 가능하다. //이러한 friend 선언은 private이나 public 둘중 아무 영역에 선언하면 된다.
-	friend void SimpleFunc();//이렇게 함수의 friend선언도 가능하다. 별도의 함수선언을 하지 않아도 된다.
+	friend void SimpleFunc();//이렇게 함수의 friend선언도 가능하다.선언이 되는것이므로 외부에 별도의 함수선언을 하지 않아도 된다.
 	static int simcount1;// static 멤버변수, 객체 내부에 존재하지는 않고 객체 외부에서 객체들간에 공유할 수 있도록 존재.마치 멤버변수처럼 접근 가능
 						//하지만 멤버변수는 아님
 public:
 	static int simcount2;//이렇게 static변수가 public에 선언되면 어디서든지 접근 가능한 변수가 된다.
-						//main에서 cout<<SImple::simcount2 이런식으로 접근 가능하다.
+						//main에서 cout<<SImple::simcount2 이런식으로 접근 가능하다.(Simple.simcount2 이렇게는 불가능)
 	
 	static void show() // static 멤버함수는 static멤버변수,멤버함수에만!! 접근할 수 있다. 일반 멤버변수,멤버함수에는 접근할 수 없다.
 	{

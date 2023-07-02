@@ -6,7 +6,7 @@ Account::Account(int incdnum, char* inname, int inmoney)
 {
 	name = new char[strlen(inname) + 1];
 	strcpy(name, inname);
-}
+};
 
 Account::Account(const Account& copy)
 	:creditNum(copy.creditNum), money(copy.money)
@@ -14,6 +14,17 @@ Account::Account(const Account& copy)
 	name = new char[strlen(copy.name) + 1];
 	strcpy(name, copy.name);
 }
+
+void Account::operator=(const Account& ref)
+{
+	creditNum = ref.creditNum;
+	money = ref.money;
+	delete[]name;
+	name = new char[strlen(ref.name) + 1];
+	strcpy(name, ref.name);
+}
+
+
 
 void Account::Deposit(int depositMoney)
 {
@@ -47,7 +58,4 @@ void Account::showAll() const
 	cout << GetMoney() << endl;
 }
 
-Account::~Account()
-{
-	delete[]name;
-}
+Account::~Account() {};

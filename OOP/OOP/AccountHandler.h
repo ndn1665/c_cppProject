@@ -2,11 +2,12 @@
 #define __ACCOUNT_HANDLER_H__
 
 #include "Account.h"
-
+#include "BoundedArray.h"
+typedef Account* Account_ptr;
 class AccountHandler
 {
 private:
-	Account* customers[100];
+	BoundedArray customers;
 	int customersCount;
 public:
 	AccountHandler();

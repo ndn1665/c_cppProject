@@ -42,10 +42,7 @@
     <ClCompile Include="BankingSystemMain.cpp">
       <Filter>소스 파일\oop</Filter>
     </ClCompile>
-    <ClCompile Include="String.h">
-      <Filter>소스 파일\oop</Filter>
-    </ClCompile>
-    <ClCompile Include="String.cpp">
+    <ClCompile Include="BoundedArray.cpp">
       <Filter>소스 파일\oop</Filter>
     </ClCompile>
   </ItemGroup>

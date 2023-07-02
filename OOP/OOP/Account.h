@@ -11,7 +11,7 @@ private:
 public:
 	Account(int incdnum, char* inname, int inmoney);
 	Account(const Account& copy);
-
+	void operator=(const Account& ref);
 	virtual void Deposit(int depositMoney);
 	int Withdraw(int withdrawMoney);
 

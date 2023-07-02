@@ -7,7 +7,6 @@
 #pragma warning(disable: 4996)
 
 using namespace std;
-using std::cin;
 
 const int NAME_LEN = 20;
 

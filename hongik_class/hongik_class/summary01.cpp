@@ -15,7 +15,33 @@ int main()
 	cout << elvis[0] << endl; // e
 	string singer;
 	if (singer == elvis) {}//이런식으로 사용 가능
-	//singer.size(); -> 길이구하는 함수 .size()
+	singer.size(); //-> 길이구하는 함수 .size() or singer.length() or singer.capacity() -> 
+
+	/*
+	추가적인 string함수
+	singer.append() == singer+"sentence"
+	singer.substr(시작위치,크기)
+	singer.replace(시작위치,크기, 바꿀string)
+	singer.find(문자열,start_index,길이)
+
+	문자열 연산자
+	+,+=, ==, < 등등
+
+	변경함수
+	stoi
+	to_string
+	*/
+
+	string str("hello");
+	string copystr(str);
+
+	char text[] = { 'l','o','v','e','\0' };
+	string love(text);
+
+	cout << str << endl;
+	cout << copystr << endl;
+	cout << love << endl;
+
 	
 	return 0;
 }

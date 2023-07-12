@@ -1,5 +1,6 @@
 ﻿  AccountHandler.cpp
-  BankingSystemMain.cpp
-  BoundedArray.cpp
-  코드를 생성하고 있습니다...
-  OOP.vcxproj -> C:\Users\노태일\Projects\c_cppProjects\OOP\x64\Debug\OOP.exe
+AccountHandler.obj : error LNK2019: "public: __cdecl BoundedArray<class Account *>::BoundedArray<class Account *>(int)" (??0?$BoundedArray@PEAVAccount@@@@QEAA@H@Z)"public: __cdecl AccountHandler::AccountHandler(void)" (??0AccountHandler@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+AccountHandler.obj : error LNK2019: "public: class Account * & __cdecl BoundedArray<class Account *>::operator[](int)" (??A?$BoundedArray@PEAVAccount@@@@QEAAAEAPEAVAccount@@H@Z)"public: __cdecl AccountHandler::~AccountHandler(void)" (??1AccountHandler@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+AccountHandler.obj : error LNK2019: "public: class Account * __cdecl BoundedArray<class Account *>::operator[](int)const " (??A?$BoundedArray@PEAVAccount@@@@QEBAPEAVAccount@@H@Z)"public: void __cdecl AccountHandler::ShowAll(void)const " (?ShowAll@AccountHandler@@QEBAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+AccountHandler.obj : error LNK2019: "public: __cdecl BoundedArray<class Account *>::~BoundedArray<class Account *>(void)" (??1?$BoundedArray@PEAVAccount@@@@QEAA@XZ)"public: __cdecl AccountHandler::~AccountHandler(void)" (??1AccountHandler@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\노태일\Projects\c_cppProjects\OOP\x64\Debug\OOP.exe : fatal error LNK1120: 4개의 확인할 수 없는 외부 참조입니다.

@@ -27,5 +27,14 @@
     <ClCompile Include="template.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="summary02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="summary03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,17 +3,16 @@
 #include "BankingCommonDecl.h" // erase later
 #include "Account.h"
 
-typedef Account * AccountPtr;
-
+template <typename T>
 class BoundedArray
 {
 private:
-	AccountPtr * arr;
+	T * arr;
 	int arrlen;
 public:
 	BoundedArray(int len = 100);
-	AccountPtr& operator[] (int idx);
-	AccountPtr operator[] (int idx) const;
+	T& operator[] (int idx);
+	T operator[] (int idx) const;
 	int GetArrlen() const;
 	~BoundedArray();
 };

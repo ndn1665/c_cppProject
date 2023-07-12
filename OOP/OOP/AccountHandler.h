@@ -7,7 +7,7 @@ typedef Account* Account_ptr;
 class AccountHandler
 {
 private:
-	BoundedArray customers;
+	BoundedArray<Account*> customers;
 	int customersCount;
 public:
 	AccountHandler();

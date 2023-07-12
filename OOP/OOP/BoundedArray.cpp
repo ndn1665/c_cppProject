@@ -1,21 +1,12 @@
-#include "BankingCommonDecl.h"
+
 #include "BoundedArray.h"
-
-BoundedArray::BoundedArray(int len) : arrlen(len)
+template <typename T>
+BoundedArray<T>::BoundedArray(int len) : arrlen(len)
 {
-	arr = new AccountPtr[arrlen];
+	arr = new T[arrlen];
 }
-
-AccountPtr& BoundedArray::operator[] (int idx)
-{
-	if (idx < 0 || idx >= arrlen)
-	{
-		cout << "index out of range" << endl;
-		exit(1);
-	}
-	return arr[idx];
-}
-AccountPtr BoundedArray::operator[] (int idx) const
+template <typename T>
+T& BoundedArray<T>::operator[] (int idx)
 {
 	if (idx < 0 || idx >= arrlen)
 	{
@@ -24,11 +15,23 @@ AccountPtr BoundedArray::operator[] (int idx) const
 	}
 	return arr[idx];
 }
-int BoundedArray::GetArrlen() const
+template <typename T>
+T BoundedArray<T>::operator[] (int idx) const
+{
+	if (idx < 0 || idx >= arrlen)
+	{
+		cout << "index out of range" << endl;
+		exit(1);
+	}
+	return arr[idx];
+}
+template <typename T>
+int BoundedArray<T>::GetArrlen() const
 {
 	return arrlen;
 }
-BoundedArray::~BoundedArray()
+template <typename T>
+BoundedArray<T>::~BoundedArray()
 {
 	delete[]arr;
 }
